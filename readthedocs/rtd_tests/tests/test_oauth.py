@@ -10,10 +10,8 @@ from django_dynamic_fixture import get
 from readthedocs.builds.constants import BUILD_STATUS_SUCCESS, EXTERNAL
 from readthedocs.builds.models import Build, Version
 from readthedocs.integrations.models import (
-    BitbucketWebhook,
     GitHubWebhook,
-    GitLabWebhook,
-)
+    GitLabWebhook)
 from readthedocs.oauth.models import RemoteOrganization, RemoteRepository
 from readthedocs.oauth.services import (
     BitbucketService,

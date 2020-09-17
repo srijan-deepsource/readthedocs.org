@@ -3,7 +3,7 @@
 """Template tags to query projects by privacy."""
 
 from django import template
-from django.db.models import Exists, OuterRef, Subquery, Prefetch
+from django.db.models import Exists, OuterRef
 
 from readthedocs.builds.models import Build
 from readthedocs.core.permissions import AdminPermission

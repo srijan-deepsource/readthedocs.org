@@ -11,11 +11,7 @@ import re
 from functools import namedtuple
 from operator import attrgetter
 from urllib.parse import urlparse
-
-from django.shortcuts import get_object_or_404
 from rest_framework import serializers
-
-from readthedocs.core.resolver import resolve
 from readthedocs.projects.constants import MKDOCS, SPHINX_HTMLDIR
 from readthedocs.projects.models import Project
 

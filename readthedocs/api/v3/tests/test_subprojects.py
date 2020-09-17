@@ -1,8 +1,5 @@
 from .mixins import APIEndpointMixin
 from django.urls import reverse
-import django_dynamic_fixture as fixture
-
-from readthedocs.projects.models import Project
 
 
 class SubprojectsEndpointTests(APIEndpointMixin):

@@ -8,8 +8,6 @@ from django.test import TestCase
 from django_dynamic_fixture import fixture, get
 from django.utils import timezone
 
-from allauth.socialaccount.models import SocialAccount
-
 from readthedocs.builds.constants import (
     BRANCH,
     EXTERNAL,
@@ -23,7 +21,6 @@ from readthedocs.doc_builder.config import load_yaml_config
 from readthedocs.doc_builder.environments import LocalBuildEnvironment
 from readthedocs.doc_builder.exceptions import DuplicatedBuildError
 from readthedocs.doc_builder.python_environments import Virtualenv
-from readthedocs.oauth.models import RemoteRepository
 from readthedocs.projects.models import EnvironmentVariable, Feature, Project
 from readthedocs.projects.tasks import UpdateDocsTaskStep
 from readthedocs.rtd_tests.tests.test_config_integration import create_load

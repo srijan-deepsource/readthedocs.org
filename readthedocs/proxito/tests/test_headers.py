@@ -1,4 +1,3 @@
-import pytest
 from django.test import override_settings
 
 import django_dynamic_fixture as fixture

@@ -3,8 +3,6 @@ MkDocs_ backend for building docs.
 
 .. _MkDocs: http://www.mkdocs.org/
 """
-
-import json
 import logging
 import os
 

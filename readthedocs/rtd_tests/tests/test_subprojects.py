@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 import django_dynamic_fixture as fixture
-from unittest import mock
 from django.contrib.auth.models import User
 from django.test import TestCase
-from django.test.utils import override_settings
 
 from readthedocs.projects.forms import ProjectRelationshipForm
 from readthedocs.projects.models import Project, ProjectRelationship
-from readthedocs.rtd_tests.utils import create_user
 
 
 class SubprojectFormTests(TestCase):

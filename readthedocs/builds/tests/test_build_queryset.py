@@ -1,11 +1,8 @@
 import pytest
 
 import django_dynamic_fixture as fixture
-from django.conf import settings
-
-from readthedocs.builds.querysets import BuildQuerySet
-from readthedocs.builds.models import Build, Version
-from readthedocs.projects.models import Project, Feature
+from readthedocs.builds.models import Build
+from readthedocs.projects.models import Project
 
 
 @pytest.mark.django_db

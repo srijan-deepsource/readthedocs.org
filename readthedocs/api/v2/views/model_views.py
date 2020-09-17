@@ -6,7 +6,6 @@ import logging
 from allauth.socialaccount.models import SocialAccount
 from django.conf import settings
 from django.core.files.storage import get_storage_class
-from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from django.template.loader import render_to_string
 from rest_framework import decorators, permissions, status, viewsets
@@ -16,25 +15,19 @@ from rest_framework.response import Response
 
 from readthedocs.builds.constants import (
     BRANCH,
-    BUILD_STATE_FINISHED,
-    BUILD_STATE_TRIGGERED,
     INTERNAL,
-    TAG,
-)
+    TAG)
 from readthedocs.builds.models import Build, BuildCommandResult, Version
 from readthedocs.core.utils import trigger_build
-from readthedocs.core.utils.extend import SettingsOverrideObject
 from readthedocs.oauth.models import RemoteOrganization, RemoteRepository
 from readthedocs.oauth.services import GitHubService, registry
-from readthedocs.projects.models import Domain, EmailHook, Project
+from readthedocs.projects.models import Domain, Project
 from readthedocs.projects.version_handling import determine_stable_version
 
 from ..permissions import (
     APIPermission,
     APIRestrictedPermission,
-    IsOwner,
-    RelatedProjectIsOwner,
-)
+    IsOwner)
 from ..serializers import (
     BuildAdminSerializer,
     BuildCommandSerializer,

@@ -7,7 +7,6 @@ from django.test import TestCase
 
 from readthedocs.projects.models import Feature, Project
 from readthedocs.projects.constants import PRIVATE, PUBLIC, PROTECTED
-from readthedocs.builds.models import Version
 from readthedocs.projects.querysets import (
     ChildRelatedProjectQuerySet,
     ParentRelatedProjectQuerySet,

@@ -11,7 +11,6 @@ from readthedocs.api.v2.serializers import BuildSerializer
 from readthedocs.builds.constants import MAX_BUILD_COMMAND_SIZE
 from readthedocs.builds.models import Build, Version
 from readthedocs.builds.utils import memcache_lock
-from readthedocs.worker import app
 
 log = logging.getLogger(__name__)
 

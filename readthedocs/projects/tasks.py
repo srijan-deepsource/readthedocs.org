@@ -12,7 +12,6 @@ import logging
 import os
 import shutil
 import signal
-import socket
 import tarfile
 import tempfile
 from collections import Counter, defaultdict
@@ -35,36 +34,29 @@ from readthedocs.builds.constants import (
     BUILD_STATE_CLONING,
     BUILD_STATE_FINISHED,
     BUILD_STATE_INSTALLING,
-    BUILD_STATE_UPLOADING,
     BUILD_STATUS_FAILURE,
     BUILD_STATUS_SUCCESS,
     EXTERNAL,
-    LATEST,
     LATEST_VERBOSE_NAME,
-    STABLE_VERBOSE_NAME,
-)
+    STABLE_VERBOSE_NAME)
 from readthedocs.builds.models import APIVersion, Build, Version
 from readthedocs.builds.signals import build_complete
 from readthedocs.config import ConfigError
 from readthedocs.core.resolver import resolve_path
 from readthedocs.core.utils import send_email
 from readthedocs.doc_builder.config import load_yaml_config
-from readthedocs.doc_builder.constants import DOCKER_LIMITS
 from readthedocs.doc_builder.environments import (
     DockerBuildEnvironment,
     LocalBuildEnvironment,
 )
 from readthedocs.doc_builder.exceptions import (
     BuildEnvironmentError,
-    BuildEnvironmentWarning,
     BuildMaxConcurrencyError,
     BuildTimeoutError,
     DuplicatedBuildError,
-    MkDocsYAMLParseError,
     ProjectBuildsSkippedError,
     VersionLockedError,
-    YAMLParseError,
-)
+    YAMLParseError)
 from readthedocs.doc_builder.loader import get_builder_class
 from readthedocs.doc_builder.python_environments import Conda, Virtualenv
 from readthedocs.oauth.models import RemoteRepository

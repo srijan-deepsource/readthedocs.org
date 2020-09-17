@@ -3,7 +3,7 @@
 import json
 import logging
 import re
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urlparse
 
 from allauth.socialaccount.providers.gitlab.views import GitLabOAuth2Adapter
 from django.conf import settings
@@ -16,7 +16,6 @@ from readthedocs.builds.constants import (
     SELECT_BUILD_STATUS,
 )
 from readthedocs.integrations.models import Integration
-from readthedocs.projects.models import Project
 
 from ..models import RemoteOrganization, RemoteRepository
 from .base import Service, SyncServiceError

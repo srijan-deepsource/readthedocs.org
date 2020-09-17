@@ -1,9 +1,7 @@
 import django_dynamic_fixture as fixture
-from django.conf import settings
 from django.test import TestCase
-from django.test.utils import override_settings
 
-from readthedocs.builds.models import Build, Version
+from readthedocs.builds.models import Build
 from readthedocs.builds.tasks import TaskRouter
 from readthedocs.projects.models import Project
 

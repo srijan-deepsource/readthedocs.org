@@ -15,10 +15,7 @@ from readthedocs.core.utils import slugify
 from readthedocs.projects.constants import (
     LANGUAGES,
     PROGRAMMING_LANGUAGES,
-    REPO_CHOICES,
-    PRIVACY_CHOICES,
-    PROTECTED,
-)
+    REPO_CHOICES)
 from readthedocs.projects.models import Project, EnvironmentVariable, ProjectRelationship
 from readthedocs.redirects.models import Redirect, TYPE_CHOICES as REDIRECT_TYPE_CHOICES
 

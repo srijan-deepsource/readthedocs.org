@@ -11,7 +11,7 @@ from unittest.mock import call
 
 from readthedocs.builds.constants import LATEST, BUILD_STATE_BUILDING
 from readthedocs.builds.models import Version, Build
-from readthedocs.core.utils import slugify, trigger_build, prepare_build
+from readthedocs.core.utils import slugify, trigger_build
 from readthedocs.core.utils.general import wipe_version_via_slugs
 from readthedocs.doc_builder.exceptions import BuildMaxConcurrencyError
 from readthedocs.projects.constants import CELERY_LOW, CELERY_MEDIUM, CELERY_HIGH

@@ -1,11 +1,8 @@
-from unittest import mock
 
 from allauth.socialaccount.models import SocialAccount, SocialToken
 from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
 import django_dynamic_fixture as fixture
 import requests_mock
-
-from django.conf import settings
 from django.contrib.auth.models import User
 from django.test import TestCase
 

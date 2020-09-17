@@ -1,5 +1,4 @@
 import django_filters.rest_framework as filters
-from django.utils.safestring import mark_safe
 from rest_flex_fields.views import FlexFieldsMixin
 from rest_framework import status
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication

@@ -6,7 +6,7 @@ from django_dynamic_fixture import G
 
 from readthedocs.builds.constants import LATEST
 from readthedocs.builds.models import Version
-from readthedocs.projects.models import HTMLFile, Project
+from readthedocs.projects.models import Project
 from readthedocs.search.tests.utils import (
     DATA_TYPES_VALUES,
     get_search_query_from_project_file,

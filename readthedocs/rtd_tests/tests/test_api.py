@@ -26,7 +26,6 @@ from readthedocs.api.v2.views.integrations import (
     GITLAB_MERGE_REQUEST,
     GITLAB_MERGE_REQUEST_CLOSE,
     GITLAB_MERGE_REQUEST_MERGE,
-    GITLAB_MERGE_REQUEST_OPEN,
     GITLAB_MERGE_REQUEST_REOPEN,
     GITLAB_MERGE_REQUEST_UPDATE,
     GITLAB_NULL_HASH,
@@ -34,8 +33,7 @@ from readthedocs.api.v2.views.integrations import (
     GITLAB_TAG_PUSH,
     GITLAB_TOKEN_HEADER,
     GitHubWebhookView,
-    GitLabWebhookView,
-)
+    GitLabWebhookView)
 from readthedocs.api.v2.views.task_views import get_status_data
 from readthedocs.builds.constants import LATEST, EXTERNAL
 from readthedocs.builds.models import Build, BuildCommandResult, Version

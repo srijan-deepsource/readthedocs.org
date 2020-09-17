@@ -1,8 +1,6 @@
 """URL patterns for views to modify user profiles."""
 
 from django.conf.urls import url
-
-from readthedocs.core.forms import UserProfileForm
 from readthedocs.profiles import views
 
 # Split URLs into different lists to be able to selectively import them from a

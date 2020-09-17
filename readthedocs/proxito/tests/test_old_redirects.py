@@ -13,7 +13,6 @@ import django_dynamic_fixture as fixture
 import pytest
 from django.http import Http404
 from django.test.utils import override_settings
-from django.urls import reverse
 
 from readthedocs.builds.models import Version
 from readthedocs.redirects.models import Redirect

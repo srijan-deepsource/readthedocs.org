@@ -8,9 +8,7 @@ from django_dynamic_fixture import get
 from rest_framework.test import APIRequestFactory
 
 from readthedocs.api.v2.views.footer_views import (
-    FooterHTML,
-    get_version_compare_data,
-)
+    get_version_compare_data)
 from readthedocs.builds.constants import BRANCH, EXTERNAL, LATEST, TAG
 from readthedocs.builds.models import Version
 from readthedocs.core.middleware import ReadTheDocsSessionMiddleware

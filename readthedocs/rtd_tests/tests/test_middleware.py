@@ -1,13 +1,8 @@
 from corsheaders.middleware import CorsMiddleware
 from django.conf import settings
-from django.contrib.auth.middleware import AuthenticationMiddleware
-from django.contrib.sessions.middleware import SessionMiddleware
-from django.http import Http404
 from django.http import HttpResponse
 from django.test import TestCase
 from django.test.client import RequestFactory
-from django.test.utils import override_settings
-from django.urls.base import get_urlconf, set_urlconf
 from django_dynamic_fixture import get
 
 from readthedocs.core.middleware import ReadTheDocsSessionMiddleware
