@@ -7,7 +7,7 @@ test_patterns = [
 
 exclude_patterns = [
     "docs/**",
-    "**/migrations/**
+    "**/migrations/**"
 ]
 
 [[analyzers]]
