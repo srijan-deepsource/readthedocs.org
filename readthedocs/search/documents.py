@@ -123,19 +123,10 @@ class PageDocument(RTDDocTypeMixin, DocType):
                 for domain in domains_qs
             ]
 
-            log.debug("[%s] [%s] Total domains for file %s are: %s" % (
-                html_file.project.slug,
-                html_file.version.slug,
-                html_file.path,
-                len(all_domains),
-            ))
+            log.debug("[%s] [%s] Total domains for file %s are: %s", html_file.project.slug, html_file.version.slug, html_file.path, len(all_domains))
 
         except Exception:
-            log.exception("[%s] [%s] Error preparing domain data for file %s" % (
-                html_file.project.slug,
-                html_file.version.slug,
-                html_file.path,
-            ))
+            log.exception("[%s] [%s] Error preparing domain data for file %s", html_file.project.slug, html_file.version.slug, html_file.path)
 
         return all_domains
 
